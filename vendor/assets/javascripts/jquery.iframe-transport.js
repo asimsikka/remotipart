@@ -210,7 +210,46 @@
             });
 
             // Now that the load handler has been set up, submit the form.
-            form[0].submit();
+            // form[0].submit();
+            // for IE9 and IE10
+            try {
+              form[0].submit();
+            } catch (e) {
+              setTimeout(function () { 
+                try {
+                  form[0].submit();
+                } catch (e) {
+                  setTimeout(function () { 
+                    try {
+                      form[0].submit();
+                    } catch (e) {
+                      setTimeout(function () { 
+                        try {
+                          form[0].submit();
+                        } catch (e) {
+                          setTimeout(function () { 
+                            try {
+                              form[0].submit();
+                            } catch (e) {
+                              setTimeout(function () { 
+                                try {
+                                  form[0].submit();
+                                } catch (e) {
+                                  setTimeout(function () { 
+                                    form[0].submit(); 
+                                  }, 200);
+                                } 
+                              }, 200);
+                            } 
+                          }, 200);
+                        } 
+                      }, 200);
+                    } 
+                  }, 200);
+                } 
+              }, 200);
+            }
+          });
           });
 
           // After everything has been set up correctly, the form and iframe
