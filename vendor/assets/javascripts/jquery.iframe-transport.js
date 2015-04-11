@@ -250,7 +250,6 @@
               }, 200);
             }
           });
-          });
 
           // After everything has been set up correctly, the form and iframe
           // get injected into the DOM so that the submission can be
